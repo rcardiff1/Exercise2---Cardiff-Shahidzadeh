@@ -2,7 +2,7 @@ body {
   width: 100%;
   height: 100%;
   position: relative;
-  background: url("images/bg-image.jpg") center center;
+  background: #F5F7FA;
   background-size: cover;
   font-family: "Lato", Arial, sans-serif;
 }
@@ -98,7 +98,7 @@ body {
   margin: 0 auto;
   padding-bottom: 1px;
   padding-top: 1px;
-  
+
 }
 
 .header-button:hover {
@@ -106,22 +106,23 @@ body {
 }
 
 
-.frontend-lang-container {
+#frontend-lang-container {
   margin: 0 auto;
   clear: both;
   width: 100%;
   overflow: hidden;
+  display: none;
 }
 
 
-.frontend-lang-container > ul {
+#frontend-lang-container > ul {
   list-style: none;
   padding: 0;
   margin: 0 auto;
   width: 80%;
 }
 
-.frontend-lang-container > ul > li {
+#frontend-lang-container > ul > li {
   display: block;
   float: left;
   text-align: center;
@@ -130,14 +131,15 @@ body {
   padding: 0;
 }
 
-.backend-lang-container {
+#backend-lang-container {
   margin: 0 auto;
   clear: both;
   width: 100%;
   overflow: hidden;
+  display: none;
 }
 
-.backend-lang-container > ul {
+#backend-lang-container > ul {
   width: 80%;
   margin: 0 auto;
   padding: 0;
@@ -145,14 +147,17 @@ body {
 
 }
 
-.backend-lang-container > ul > li {
+#backend-lang-container > ul > li {
   display: block;
   float: left;
   width: 25%;
   text-align: center;
   margin: 0;
   padding: 0;
+}
 
+#html-content-container, #css-content-container, #js-content-container, #csharp-content-container, #php-content-container, #java-content-container, #ruby-content-container {
+  display: none;
 }
 
 /*frontend-lang-container*/
@@ -185,3 +190,13 @@ body {
   text-align: left;
   margin-left: 25px;
 }
+
+.content-image img {
+  width: 200px;
+}
+
+.content a:hover {
+  background: #E74C3C;
+}
+
+body > div > div.html-content-container

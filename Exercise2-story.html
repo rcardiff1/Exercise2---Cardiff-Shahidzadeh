@@ -2,6 +2,21 @@
 
 
 	<head>
+
+	<script type="text/javascript" language="JavaScript"><!--
+function HideContent(d) {
+document.getElementById(d).style.display = "none";
+}
+function ShowContent(d) {
+document.getElementById(d).style.display = "block";
+}
+function ReverseDisplay(d) {
+if(document.getElementById(d).style.display == "none") { document.getElementById(d).style.display = "block"; }
+else { document.getElementById(d).style.display = "none"; }
+}
+//--></script>
+
+
 		<title>Deciphering the Labyrinth of Front-End Languages</title>
 		<meta charset="utf-8">
 		<link href="style.css" rel="stylesheet">
@@ -37,18 +52,23 @@
 				<!-- //Programming End Selector -->
 	      <div class="frontend-header">
 	        <div class="header-button">
+						<a href="javascript:ShowContent('frontend-lang-container')">
+
 						<h2>Front-End</h2>
+					</a>
 					</div>
 				</div>
 
 				<div class="backend-header">
 					<div class="header-button">
+						<a href="javascript:ShowContent('backend-lang-container')">
 						<h2>Back-End</h2>
+					</a>
 					</div>
 				</div>
 			</div>
 				<!-- //Front-End Languages -->
-			<div class="frontend-lang-container">
+			<div id="frontend-lang-container">
 				<ul>
 					<li class="html">
 						<h2>HTML</h2>
@@ -62,9 +82,9 @@
 						<h2>JavaScript</h2>
 					</li>
 				</ul>
-		</div>
+			</div>
 		<!-- 	Back-End Languages -->
-		<div class="backend-lang-container">
+		<div id="backend-lang-container">
 			<ul>
 				<li>
 					<h2>C&#35;</h2>
@@ -80,38 +100,80 @@
 				</li>
 			</ul>
 		</div>
-		<!-- HTML Content Container -->
-		<div class="html-content-container">
+	<!-- 	HTML Content Container -->
+		<div id="html-content-container">
 			<div class="content-layout">
 				<div class="content-image">
 					<img src="images/html5-logo.png" alt="" />
 				</div>
 				<div class="content">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque gravida erat et venenatis porta. Integer ac magna sit amet orci convallis molestie. Ut pretium posuere arcu, eget sollicitudin urna commodo eget. Donec imperdiet nunc in ornare consequat. Donec viverra malesuada malesuada. Quisque at enim sodales, luctus nibh sollicitudin, dignissim nibh. Curabitur tristique lorem sed enim sollicitudin, vel fringilla augue condimentum. Pellentesque sagittis risus sapien, ut volutpat mi consectetur et. Nunc sodales sapien vel gravida vehicula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In eu nisl non lorem egestas blandit sit amet nec felis. Integer et nibh mi. Nullam at sodales dui, et condimentum est. Etiam nec nisi semper, fringilla lectus porttitor, fermentum leo. Aliquam erat volutpat.
+					HyperText Markup Language, commonly referred to as HTML, is the standard markup language used to create web pages.[1] It is written in the form of HTML elements consisting of tags enclosed in angle brackets (like html). HTML tags most commonly come in pairs like h1 and h1, although some represent empty elements and so are unpaired, for example img. The first tag in such a pair is the start tag, and the second is the end tag (they are also called opening tags and closing tags). <a href="http://en.wikipedia.org/wiki/HTML" target="_blank">Source: Wikipedia</a>
 				</div>
 			</div>
 		</div>
-		<div class="css-content-container">
+		<div id="css-content-container">
 			<div class="content-layout">
 				<div class="content-image">
 					<img src="images/css3-logo.png" alt="" />
 				</div>
 				<div class="content">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque gravida erat et venenatis porta. Integer ac magna sit amet orci convallis molestie. Ut pretium posuere arcu, eget sollicitudin urna commodo eget. Donec imperdiet nunc in ornare consequat. Donec viverra malesuada malesuada. Quisque at enim sodales, luctus nibh sollicitudin, dignissim nibh. Curabitur tristique lorem sed enim sollicitudin, vel fringilla augue condimentum. Pellentesque sagittis risus sapien, ut volutpat mi consectetur et. Nunc sodales sapien vel gravida vehicula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In eu nisl non lorem egestas blandit sit amet nec felis. Integer et nibh mi. Nullam at sodales dui, et condimentum est. Etiam nec nisi semper, fringilla lectus porttitor, fermentum leo. Aliquam erat volutpat.
+					Cascading Style Sheets (CSS) is a style sheet language used for describing the look and formatting of a document written in a markup language. While most often used to change the style of web pages and user interfaces written in HTML and XHTML, the language can be applied to any kind of XML document, including plain XML, SVG and XUL. Along with HTML and JavaScript, CSS is a cornerstone technology used by most websites to create visually engaging webpages, user interfaces for web applications, and user interfaces for many mobile applications. <a href="http://en.wikipedia.org/wiki/Cascading_Style_Sheets" target="_blank">Source: Wikipedia</a>
 				</div>
 			</div>
 		</div>
-		<div class="js-content-container">
+		<div id="js-content-container">
 			<div class="content-layout">
 				<div class="content-image">
 					<img src="images/js-logo.png" alt="" />
 				</div>
 				<div class="content">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque gravida erat et venenatis porta. Integer ac magna sit amet orci convallis molestie. Ut pretium posuere arcu, eget sollicitudin urna commodo eget. Donec imperdiet nunc in ornare consequat. Donec viverra malesuada malesuada. Quisque at enim sodales, luctus nibh sollicitudin, dignissim nibh. Curabitur tristique lorem sed enim sollicitudin, vel fringilla augue condimentum. Pellentesque sagittis risus sapien, ut volutpat mi consectetur et. Nunc sodales sapien vel gravida vehicula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In eu nisl non lorem egestas blandit sit amet nec felis. Integer et nibh mi. Nullam at sodales dui, et condimentum est. Etiam nec nisi semper, fringilla lectus porttitor, fermentum leo. Aliquam erat volutpat.
+					JavaScript (/ˈdʒɑːvɑːˌskrɪpt/; JS), also known as ECMAScript (the untrademarked name used for the standard), is a dynamic programming language.[5] It is most commonly used as part of web browsers, whose implementations allow client-side scripts to interact with the user, control the browser, communicate asynchronously, and alter the document content that is displayed.[5] It is also used in server-side network programming with runtime environments such as Node.js, game development and the creation of desktop and mobile applications. <a href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">Source: Wikipedia</a>
 				</div>
 			</div>
 		</div>
-<!-- Main Container Closing DIV -->
+
+		<!-- Robert added this secetion on 6_4_15 -->
+		<!-- CSharp Content Container-->
+		<div id="csharp-content-container">
+			<div class="content-layout">
+				<div class="content-image">
+					<img src="images/csharp-logo.png" alt="" />
+				</div>
+				<div class="content">
+					C#[note 2] (pronounced as see sharp) is a multi-paradigm programming language encompassing strong typing, imperative, declarative, functional, generic, object-oriented (class-based), and component-oriented programming disciplines. It was developed by Microsoft within its .NET initiative and later approved as a standard by Ecma (ECMA-334) and ISO (ISO/IEC 23270:2006). C# is one of the programming languages designed for the Common Language Infrastructure. <a href="http://en.wikipedia.org/wiki/C_Sharp_%28programming_language%29" target="_blank">Source: Wikipedia</a>
+				</div>
+			</div>
+		</div>
+		<div id="php-content-container">
+			<div class="content-layout">
+				<div class="content-image">
+					<img src="images/php-logo.png" alt="" />
+				</div>
+				<div class="content">
+					PHP is a server-side scripting language created in 1995 and designed for web development but also used as a general-purpose programming language. As of January 2013, PHP was installed on more than 240 million websites (39% of those sampled) and 2.1 million web servers.[3] Originally created by Rasmus Lerdorf in 1994,[4] the reference implementation of PHP (powered by the Zend Engine) is now produced by The PHP Group.[5] While PHP originally stood for Personal Home Page,[4] it now stands for PHP: Hypertext Preprocessor, which is a recursive backronym. <a href="http://en.wikipedia.org/wiki/PHP" target="_blank">Source: Wikipedia</a>
+				</div>
+			</div>
+		</div>
+		<div id="java-content-container">
+			<div class="content-layout">
+				<div class="content-image">
+					<img src="images/java-logo.png" alt="" />
+				</div>
+				<div class="content">
+					Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented,[12] and specifically designed to have as few implementation dependencies as possible. It is intended to let application developers "write once, run anywhere" (WORA),[13] meaning that compiled Java code can run on all platforms that support Java without the need for recompilation.[14] Java applications are typically compiled to bytecode that can run on any Java virtual machine (JVM) regardless of computer architecture. <a href="http://en.wikipedia.org/wiki/Java_%28programming_language%29" target="_blank">Source: Wikipedia</a>
+				</div>
+			</div>
+		</div>
+		<div id="ruby-content-container">
+			<div class="content-layout">
+				<div class="content-image">
+					<img src="images/ruby-logo.png" alt="" />
+				</div>
+				<div class="content">
+					Ruby is a dynamic, reflective, object-oriented, general-purpose programming language. It was designed and developed in the mid-1990s by Yukihiro "Matz" Matsumoto in Japan. According to its authors, Ruby was influenced by Perl, Smalltalk, Eiffel, Ada, and Lisp.[13] It supports multiple programming paradigms, including functional, object-oriented, and imperative. It also has a dynamic type system and automatic memory management. <a href="http://en.wikipedia.org/wiki/Ruby_%28programming_language%29" target="_blank">Source: Wikipedia</a>
+				</div>
+			</div>
+		</div>
 	</div>
 
 
