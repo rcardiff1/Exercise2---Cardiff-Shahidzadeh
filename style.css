@@ -69,7 +69,7 @@ body {
   text-align: center;
 }
 
-.content-container {
+.end-container {
   width: 80%;
   color: #3e5873;
   margin: 0 auto;
@@ -77,37 +77,99 @@ body {
   padding-bottom: 40px;
 }
 
-.content-container > a > div {
-  position: relative;
-  display: inline-block;
-  width: 50%;
-  text-align: center;
-  font-weight: bolder;
-}
-
-.content-container > a:nth-child(1) {
+.frontend-header {
   float: left;
   width: 50%;
 }
 
-.content-container a > div + div {
+.backend-header {
+  display: inline-block;
+  width: 50%;
+}
+
+.header-button {
+  width: 150px;
+  height: auto;
+  background-color: #666;
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px #333;
+  margin: 0 auto;
+  padding-bottom: 1px;
+  padding-top: 1px;
+  
+}
+
+.header-button:hover {
+  margin:
+}
+
+
+.frontend-lang-container {
+  margin: 0 auto;
+  clear: both;
+  width: 100%;
+  overflow: hidden;
+}
+
+
+.frontend-lang-container > ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.frontend-lang-container > ul > li {
+  display: block;
+  float: left;
+  text-align: center;
+  width: 33%;
+  margin: 0;
+  padding: 0;
+}
+
+.backend-lang-container {
+  margin: 0 auto;
+  clear: both;
+  width: 100%;
+  overflow: hidden;
+}
+
+.backend-lang-container > ul {
+  width: 80%;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
 
 }
 
-.html, .css, .javascript {
-  width: 32% !important;
+.backend-lang-container > ul > li {
+  display: block;
+  float: left;
+  width: 25%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+
 }
 
-.html > h2 {}
+/*frontend-lang-container*/
+.content-container > div:nth-child(3) {
+  width: 100%;
+}
+
 
 .content-layout {
   margin-top: 5px;
+  clear: both;
+  overflow: hidden;
 }
 
 .content-image {
   float: left;
   width: 200px;
-  height: 250px;
+  height: auto;
   border: 1px solid #666;
   box-shadow: 1px 1px 3px #666;
   border-radius: 10px;
