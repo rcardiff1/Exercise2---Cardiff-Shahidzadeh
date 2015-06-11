@@ -7,6 +7,10 @@ body {
   font-family: "Lato", Arial, sans-serif;
 }
 
+.hidden {
+  display: none;
+}
+
 .main-container {
   width: 80%;
   /*test */
@@ -106,23 +110,22 @@ body {
 }
 
 
-#frontend-lang-container {
+.frontend-lang-container {
   margin: 0 auto;
   clear: both;
   width: 100%;
   overflow: hidden;
-  display: none;
 }
 
 
-#frontend-lang-container > ul {
+.frontend-lang-container > ul {
   list-style: none;
   padding: 0;
   margin: 0 auto;
   width: 80%;
 }
 
-#frontend-lang-container > ul > li {
+.frontend-lang-container > ul > li {
   display: block;
   float: left;
   text-align: center;
@@ -131,15 +134,14 @@ body {
   padding: 0;
 }
 
-#backend-lang-container {
+.backend-lang-container {
   margin: 0 auto;
   clear: both;
   width: 100%;
   overflow: hidden;
-  display: none;
 }
 
-#backend-lang-container > ul {
+.backend-lang-container > ul {
   width: 80%;
   margin: 0 auto;
   padding: 0;
@@ -147,7 +149,7 @@ body {
 
 }
 
-#backend-lang-container > ul > li {
+.backend-lang-container > ul > li {
   display: block;
   float: left;
   width: 25%;
@@ -157,7 +159,7 @@ body {
 }
 
 #html-content-container, #css-content-container, #js-content-container, #csharp-content-container, #php-content-container, #java-content-container, #ruby-content-container {
-  display: none;
+  /*display: none;*/
 }
 
 /*frontend-lang-container*/
@@ -197,6 +199,15 @@ body {
 
 .content a:hover {
   background: #E74C3C;
+}
+
+a {
+  text-decoration: none;
+  color: #9dc7f3;
+}
+
+a:hover {
+  color: #2083ba;
 }
 
 body > div > div.html-content-container

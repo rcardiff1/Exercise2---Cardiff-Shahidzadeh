@@ -3,18 +3,50 @@
 
 	<head>
 
-	<script type="text/javascript" language="JavaScript"><!--
-function HideContent(d) {
-document.getElementById(d).style.display = "none";
-}
-function ShowContent(d) {
-document.getElementById(d).style.display = "block";
-}
-function ReverseDisplay(d) {
-if(document.getElementById(d).style.display == "none") { document.getElementById(d).style.display = "block"; }
-else { document.getElementById(d).style.display = "none"; }
-}
-//--></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script>
+	$(document).ready(function(){
+	    //hide all divs that we do not want to show on load
+	   //  $(".main-container > div > ul").hide();
+	   //  $(".main-container > div > ul").hide();
+	   //  $("#html-content-container").hide();
+	   //  $("#css-content-container").hide();
+	   //  $("#js-content-container").hide();
+	   //  $("#csharp-content-container").hide();
+	   //  $("#php-content-container").hide();
+	   //  $("#java-content-container").hide();
+	  	// $("#ruby-content-container").hide();
+	  	//when "front-end" or "back-end" are clicked to load corresponing language names: 
+	  		//Front-End: HTML, CSS, JS
+	  		//Back-End: C#, PHP, Java, Ruby
+	  	//When either "End" is clicked it will need to hide the other "end's" languages -- effectively only showing one set (div) of languages
+	  	//While browsing the languages the language shall remain shown, unless switched to the other "end"
+	  	//When ANY language is clicked the hidden divs listed at top will "show"
+	  	//When switching between languages the divs listed above will show and hide --effectively replace the previously shown div
+
+	   
+
+		// $('.end-container').click(function() {
+		//     console.log($(this).index('div'));
+		//     // var $div = $('.parent > div').eq($(this).index('#nav a'));
+		//     // $div.show();
+		//     // $('.parent > div').not($div).hide();
+		// });
+
+		// function reveal1() { 
+  //   		$("div").not("#section1").hide("slow");
+  //   		$("#section1").show();
+  //   	}
+
+		// $(".frontendheader").click(function reveal1() { 
+  //   		$("div").not(".frontend-lang-container").hide("slow");
+  //   		$("frontend-lang-container").show();
+  //   	});
+
+
+	});
+
+	</script>
 
 
 		<title>Deciphering the Labyrinth of Front-End Languages</title>
@@ -26,22 +58,22 @@ else { document.getElementById(d).style.display = "none"; }
     <!--This div will hold the entire page-->
   	<div class="main-container">
       <!--This div is the banner-->
-      <div class="banner">
-        <div class="assignment-title">
-					<p>Exercise 2</p>
-        </div>
-				<a href="Exercise2-story.html">
-        	<div class="logo">
-						<img src="images/ms-image.png" height="40px" />
-        	</div>
-				</a>
-        <div class="names">
-					<span>
-						<p>Robert Cardiff</p>
-						<p>Varuzhan Shahidzadeh</p>
-					</span>
-        </div>
-      </div>
+    	<div class="banner">
+	        <div class="assignment-title">
+						<p>Exercise 2</p>
+	        </div>
+			<a href="Exercise2-story.html">
+	    		<div class="logo">
+					<img src="images/ms-image.png" height="40px" />
+	        	</div>
+			</a>
+	        <div class="names">
+				<span>
+					<p>Robert Cardiff</p>
+					<p>Varuzhan Shahidzadeh</p>
+				</span>
+		    </div>
+		</div>
 	    <div class="header">
 				<div class="breadcrumbs">
 				</div>
@@ -50,58 +82,53 @@ else { document.getElementById(d).style.display = "none"; }
 	    <!--This div will hold all the content for the front-end language and navigation bar-->
 	    <div class="end-container">
 				<!-- //Programming End Selector -->
-	      <div class="frontend-header">
-	        <div class="header-button">
-						<a href="javascript:ShowContent('frontend-lang-container')">
-
-						<h2>Front-End</h2>
-					</a>
-					</div>
-				</div>
-
-				<div class="backend-header">
-					<div class="header-button">
-						<a href="javascript:ShowContent('backend-lang-container')">
-						<h2>Back-End</h2>
-					</a>
-					</div>
+			<div class="frontend-header">
+				<div class="header-button show-er">
+					<h2>Front-End</h2>
 				</div>
 			</div>
-				<!-- //Front-End Languages -->
-			<div id="frontend-lang-container">
-				<ul>
-					<li class="html">
-						<h2>HTML</h2>
-					</li>
 
-					<li class="css">
-						<h2>CSS</h2>
-					</li>
-
-					<li class="javascript">
-						<h2>JavaScript</h2>
-					</li>
-				</ul>
+			<div class="backend-header">
+				<div class="header-button show-er">
+					<h2>Back-End</h2>
+				</div>
 			</div>
-		<!-- 	Back-End Languages -->
-		<div id="backend-lang-container">
+		</div>
+		<!-- //Front-End Languages -->
+		<div class="frontend-lang-container hidden">
 			<ul>
-				<li>
+				<li data-lang="html" class="lang">
+					<h2>HTML</h2>
+				</li>
+
+				<li data-lang="css" class="lang">
+					<h2>CSS</h2>
+				</li>
+
+				<li data-lang="js" class="lang">
+					<h2>JavaScript</h2>
+				</li>
+			</ul>
+		</div>
+		<!-- 	Back-End Languages -->
+		<div class="backend-lang-container hidden">
+			<ul>
+				<li data-lang="csharp" class="lang">
 					<h2>C&#35;</h2>
 				</li>
-				<li>
+				<li data-lang="php" class="lang">
 					<h2>PHP</h2>
 				</li>
-				<li>
-					<h2>Java</h2>
+				<li data-lang="java" class="lang">
+					<h2>Java</h2>	
 				</li>
-				<li>
+				<li data-lang="ruby" class="lang">
 					<h2>Ruby</h2>
 				</li>
 			</ul>
 		</div>
-	<!-- 	HTML Content Container -->
-		<div id="html-content-container">
+		<!-- 	HTML Content Container -->
+		<div id="html-content-container" class="language">
 			<div class="content-layout">
 				<div class="content-image">
 					<img src="images/html5-logo.png" alt="" />
@@ -111,7 +138,7 @@ else { document.getElementById(d).style.display = "none"; }
 				</div>
 			</div>
 		</div>
-		<div id="css-content-container">
+		<div id="css-content-container" class="language">
 			<div class="content-layout">
 				<div class="content-image">
 					<img src="images/css3-logo.png" alt="" />
@@ -121,7 +148,7 @@ else { document.getElementById(d).style.display = "none"; }
 				</div>
 			</div>
 		</div>
-		<div id="js-content-container">
+		<div id="js-content-container" class="language">
 			<div class="content-layout">
 				<div class="content-image">
 					<img src="images/js-logo.png" alt="" />
@@ -134,7 +161,7 @@ else { document.getElementById(d).style.display = "none"; }
 
 		<!-- Robert added this secetion on 6_4_15 -->
 		<!-- CSharp Content Container-->
-		<div id="csharp-content-container">
+		<div id="csharp-content-container" class="language">
 			<div class="content-layout">
 				<div class="content-image">
 					<img src="images/csharp-logo.png" alt="" />
@@ -144,7 +171,7 @@ else { document.getElementById(d).style.display = "none"; }
 				</div>
 			</div>
 		</div>
-		<div id="php-content-container">
+		<div id="php-content-container" class="language">
 			<div class="content-layout">
 				<div class="content-image">
 					<img src="images/php-logo.png" alt="" />
@@ -154,7 +181,7 @@ else { document.getElementById(d).style.display = "none"; }
 				</div>
 			</div>
 		</div>
-		<div id="java-content-container">
+		<div id="java-content-container" class="language">
 			<div class="content-layout">
 				<div class="content-image">
 					<img src="images/java-logo.png" alt="" />
@@ -164,7 +191,7 @@ else { document.getElementById(d).style.display = "none"; }
 				</div>
 			</div>
 		</div>
-		<div id="ruby-content-container">
+		<div id="ruby-content-container" class="language">
 			<div class="content-layout">
 				<div class="content-image">
 					<img src="images/ruby-logo.png" alt="" />
@@ -175,32 +202,21 @@ else { document.getElementById(d).style.display = "none"; }
 			</div>
 		</div>
 	</div>
+    <script>
+        $('.language').hide();
+        $('.frontend-header').click(function(){
+        	$('.frontend-lang-container').toggle();
+        	$('.backend-lang-container').hide();
+        });
+        $('.backend-header').click(function(){
+        	$('.backend-lang-container').toggle();
+        	$('.frontend-lang-container').hide();
+        });
 
-
-
-
-
-
-				<!-- <a href="html.html">
-		      <div class="html">
-		        <h2>HTML</h2>
-		      </div>
-				</a>
-
-				<a href="css.html">
-		      <div class="css">
-		        <h2>CSS</h2>
-		      </div>
-				</a>
-
-				<a href=".html">
-		      <div class="javascript">
-		        <h2>JavaScript</h2>
-		      </div>
-				</a> -->
-	    </div>
-    </div>
-
-        </div>
+        $('.lang').click(function(){
+        	$('.language').hide()
+        	$('#' + $(this).data('lang') + '-content-container').show();
+        })
+	</script>
   </body>
 </html>
